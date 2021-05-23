@@ -49,7 +49,7 @@ if (Config.WORKTYPE == 'private') {
             );
         
             await message.client.sendMessage(
-                message.jid,'●▬▬▬ *𝓙𝓮𝓼𝓼𝓲𝓮 𝙲𝚘𝚖𝚖𝚊𝚗𝚍-𝙻𝚒𝚜𝚝* ☯ ▬▬▬●\n\n' + CMD_HELP, MessageType.text
+                message.jid,'●▬ *𝓙𝓮𝓼𝓼𝓲𝓮 𝙲𝚘𝚖𝚖𝚊𝚗𝚍-𝙻𝚒𝚜𝚝*☯ ▬●\n\n' + CMD_HELP, MessageType.text
             );    
         } else {
 
@@ -85,7 +85,7 @@ if (Config.WORKTYPE == 'private') {
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
             await message.client.sendMessage(
-                message.jid,'●▬▬▬ *𝓙𝓮𝓼𝓼𝓲𝓮 𝙲𝚘𝚖𝚖𝚊𝚗𝚍-𝙻𝚒𝚜𝚝* ☯ ▬▬▬●\n\n' + CMD_HELP, MessageType.text
+                message.jid,'●▬ *𝓙𝓮𝓼𝓼𝓲𝓮 𝙲𝚘𝚖𝚖𝚊𝚗𝚍-𝙻𝚒𝚜𝚝*☯ ▬●\n\n' + CMD_HELP, MessageType.text
             );
         }
     }));
@@ -126,7 +126,7 @@ else if (Config.WORKTYPE == 'public') {
             );
         
             await message.client.sendMessage(
-                message.jid,'●▬▬▬ *𝓙𝓮𝓼𝓼𝓲𝓮 𝙲𝚘𝚖𝚖𝚊𝚗𝚍-𝙻𝚒𝚜𝚝* ☯ ▬▬▬●\n\n' + CMD_HELP, MessageType.text
+                message.jid,'●▬ *𝓙𝓮𝓼𝓼𝓲𝓮 𝙲𝚘𝚖𝚖𝚊𝚗𝚍-𝙻𝚒𝚜𝚝*☯ ▬●\n\n' + CMD_HELP, MessageType.text
             );    
         } else {
 
@@ -162,7 +162,7 @@ else if (Config.WORKTYPE == 'public') {
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
             await message.client.sendMessage(
-                message.jid,'●▬▬▬ *𝓙𝓮𝓼𝓼𝓲𝓮 𝙲𝚘𝚖𝚖𝚊𝚗𝚍-𝙻𝚒𝚜𝚝* ☯ ▬▬▬●\n\n' + CMD_HELP, MessageType.text
+                message.jid,'●▬ *𝓙𝓮𝓼𝓼𝓲𝓮 𝙲𝚘𝚖𝚖𝚊𝚗𝚍-𝙻𝚒𝚜𝚝*☯ ▬●\n\n' + CMD_HELP, MessageType.text
             );
         }
     }));
