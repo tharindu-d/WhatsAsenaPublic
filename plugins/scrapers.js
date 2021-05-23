@@ -12,9 +12,6 @@ const translatte = require('translatte');
 const config = require('../config');
 const axios = require('axios')
 
-//============================== LYRICS =============================================
-const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
-const solenolyrics= require("solenolyrics"); 
 //============================== CURRENCY =============================================
 const { exchangeRates } = require('exchange-rates-api');
 const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
@@ -257,22 +254,7 @@ if (config.WORKTYPE == 'private') {
             message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
         });
     }));
-
-    Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
-
-        var aut = await solenolyrics.requestLyricsFor(`${match[1]}`); 
-        var son = await solenolyrics.requestAuthorFor(`${match[1]}`);
-        var cov = await solenolyrics.requestIconFor(`${match[1]}`);
-        var tit = await solenolyrics.requestTitleFor(`${match[1]}`);
-
-        var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
-
-        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
-
-    }));
-
+    
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
         if (message.jid === '905524317852-1612300121@g.us') {
@@ -535,21 +517,6 @@ else if (config.WORKTYPE == 'public') {
 
             message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
         });
-    }));
-
-    Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
-
-        var aut = await solenolyrics.requestLyricsFor(`${match[1]}`); 
-        var son = await solenolyrics.requestAuthorFor(`${match[1]}`);
-        var cov = await solenolyrics.requestIconFor(`${match[1]}`);
-        var tit = await solenolyrics.requestTitleFor(`${match[1]}`);
-
-        var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
-
-        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
-
     }));
 
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
