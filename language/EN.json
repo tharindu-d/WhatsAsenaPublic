@@ -128,9 +128,12 @@
         "memes": {
             "MEMES_DESC": "Photo memes you replied to.",
             "NEED_REPLY": "*Reply to a photo!*",
-            "DOWNLOADING": "```Downloading media & making meme...```",
-            "JCMD_DESC": "Show all Commands List."            
+            "DOWNLOADING": "```Downloading media & making meme...```"
+                        
         },
+	"cmdlist": {
+	   "JCMD_DESC": "Show all Commands List."
+	},
         "ocr": {
             "OCR_DESC": "Reads the text on the photo you have replied.",
             "NEED_REPLY": "*Reply to a photo!*",
@@ -159,7 +162,7 @@
             "REMOVEBG_DESC": "Removes the background of the photos.",
             "NEED_PHOTO": "*Give me a photo!*",
             "NO_API_KEY": "*You don't have an API key!*\nYou can get it here: remove.bg.",
-            "RBGING": "```Removing background...```"
+            "RBGING": "```Removing background...💢```"
         },
         "scrapers": {
             "TRANSLATE_DESC": "It translates with Google Translate. You must reply any message.",
@@ -181,20 +184,20 @@
             "UPLOADING_SONG": "```Uploading your song...```",
             "VIDEO_DESC": "Downloads video from YouTube.",
             "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
-            "DOWNLOADING_VIDEO": "```Downloading your video...```",
-            "UPLOADING_VIDEO": "```Uploading your video...```",
+            "DOWNLOADING_VIDEO": "```Downloading your video...⬇```",
+            "UPLOADING_VIDEO": "```Uploading your video...⬆```",
             "YT_DESC": "It searchs on YouTube.",
             "NEED_WORDS": "```Please write a few words!```",
-            "GETTING_VIDEOS": "```I'm bringing videos...```",
+            "GETTING_VIDEOS": "```I'm bringing videos...🌐```",
             "NOT_FOUND": "*I couldn't find anything 😣 :(*",
             "SEARCHING": "* 🔎 Searching...*",
             "WIKI_DESC": "Searches query on Wikipedia.",
-            "IMG_DESC": "Searches for related pics on Google.",
+            "IMG_DESC": "🔎 Searches for related pics on Google.",
             "IMG": "Uploading photo ```{}``` number ```{} ```..."
         },
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",
-            "NEED_REPLY": "*Reply to a photo!*",
+            "NEED_REPLY": "*Reply to a photo..!*",
             "DOWNLOADING": "```Media downloading & converting to sticker...```"
         },
         "system_stats": {
@@ -391,16 +394,7 @@
             "NEED_WORD": "*You must enter words!*",
             "ANIME_DESC": "It writes the text inside the banner the anime girl is holding",
             "TRUMP_DESC": "Converts the text to Trump's tweet.",
-            "CHANGE_DESC": "Turns the text into the change my mind poster.",
-            "GLOW_DESC": "Converts text into neon painting."
-       },
-       "lyrics": {
-           "LY_DESC": "🔎 Finds the lyrics of the song. ",
-           "NEED": "```You Must Write Any Song..!```",
-           "SLY": "Lyrics:",
-           "AUT": "Song Owner:",
-           "BUL": "Founded Song:",
-           "ARAT": "Searched Song:"
+            "CHANGE_DESC": "Turns the text into the change my mind poster."
        },
        "anime": { 
             "AN": "It sends an Anime Randomly."
