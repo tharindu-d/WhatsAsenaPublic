@@ -645,7 +645,7 @@ if (Config.WORKTYPE == 'private') {
 
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by 𝓙𝓮𝓼𝓼𝓲𝓮 🔥'})
+        await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
 
     }));
 }
@@ -1280,7 +1280,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by 𝓙𝓮𝓼𝓼𝓲𝓮 🔥'})
+        await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
 
     }));
 }
