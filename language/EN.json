@@ -157,7 +157,7 @@
         },
         "removebg": {
             "REMOVEBG_DESC": "Removes the background of the photos.",
-            "NEED_PHOTO": "*Give me a photo!*",
+            "NEED_PHOTO": "*Give me a photo..!📷*",
             "NO_API_KEY": "*You don't have an API key!*\nYou can get it here: remove.bg.",
             "RBGING": "```Removing background...💢```"
         },
@@ -236,7 +236,7 @@
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
-            "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather Colombo```",
+            "NEED_LOCATION": "* Please write a location..!⛳*\n*Example:* ```.weather Colombo```",
             "LOCATION": "Location",
             "TEMP": "Temperature",
             "DESC": "Description",
