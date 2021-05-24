@@ -131,9 +131,6 @@
             "DOWNLOADING": "```Downloading media & making meme...```"
                         
         },
-	"cmdlist": {
-	   "JCMD_DESC": "Show all Commands List."
-	},
         "ocr": {
             "OCR_DESC": "Reads the text on the photo you have replied.",
             "NEED_REPLY": "*Reply to a photo!*",
@@ -179,7 +176,7 @@
             "TTS_ERROR": "```Error, Speech example of your sentence couldn't be made!```",
             "SONG_DESC": "Uploads the song you wrote.",
             "NEED_TEXT_SONG": "*Please write a song..!*\n*Example:* ```.song eminem - rap god```",
-            "NO_RESULT": "*I couldn't find anything 😣 :(*",
+            "NO_RESULT": "*I couldn't find anything 😣*",
             "DOWNLOADING_SONG": "```Downloading your song...```",
             "UPLOADING_SONG": "```Uploading your song...```",
             "VIDEO_DESC": "Downloads video from YouTube.",
@@ -197,7 +194,7 @@
         },
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",
-            "NEED_REPLY": "*Reply to a photo..!*",
+            "NEED_REPLY": "*Reply to a photo..!📸*",
             "DOWNLOADING": "```Media downloading & converting to sticker...```"
         },
         "system_stats": {
@@ -268,7 +265,7 @@
             "STİCKER_DESC": "Converts the sticker to a photo.",
             "STİCKER_NEEDREPLY": "*You Must Reply to a sticker!*",
             "STİCKER": "```Converting the sticker to a photo..```",
-            "XMEDİA_DESC": "It is a plugin with more than 25 media tools.",
+            "XMEDİA_DESC": "Show all Command List..!",
             "T_FALSE": "```❌ Incorrect Blend Effect Entered!```\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
             "T_NOT": "```💭 You Need To Enter Any Blend Effects!\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
             "T_DESC": "Applies the selected TBlend effect to videos." 
@@ -376,7 +373,7 @@
         "carbon": {
             "CARBON_DESC": "Uses carbon.sh for Text-to-Image",
             "CARBON_NEEDWORD": "*Not enough arguments to translate Text-to-Image!*\nExample: ```.carbon test```\nExample: ```.carbon making#test```",
-            "CARBON_WARN": "Please only type in en and tr character!"
+            "CARBON_WARN": "Please only type in English character!"
         },
         "scam": {
             "SCAM_DESC": "Creates 5 minutes of fake actions.",
