@@ -36,7 +36,6 @@ const spotifyApi = new SpotifyWebApi({
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 const Glang = Language.getString('github');
-const Slang = Language.getString('lyrics');
 
 const wiki = require('wikijs').default;
 var gis = require('g-i-s');
@@ -254,7 +253,7 @@ if (config.WORKTYPE == 'private') {
             message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
         });
     }));
-    
+
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
         if (message.jid === '905524317852-1612300121@g.us') {
