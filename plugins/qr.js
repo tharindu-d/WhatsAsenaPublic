@@ -25,6 +25,6 @@ Asena.addCommand({pattern: 'qr ?(.*)', fromMe: false, desc: QR_DESC}, (async (me
 
     var webimage = await axios.get(`https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${match[1].replace(/#/g, '\n')} `, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: "Made By 𝓙𝓮𝓼𝓼𝓲𝓮 🔥"})
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: "★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥"})
 
 }));
