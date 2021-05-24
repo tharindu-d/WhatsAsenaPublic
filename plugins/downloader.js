@@ -42,7 +42,7 @@ Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (me
         
       })
       .catch(
-        async (err) => await message.sendMessage(errorMessage("Invaild Link, Please Enter a Vaild Instagram Link")),
+        async (err) => await message.sendMessage(errorMessage("Invaild Link, Please Enter a Vaild Instagram Link..!")),
       )
   },
 )
