@@ -91,12 +91,12 @@
         "ALIVE_LOGO": {
             "description": "Customizable Alive Logo! Use => https://i.ibb.co/, to change back.",
             "required": true,
-            "value": "https://i.ibb.co/hdb4VFH/IMG-20210516-WA0008.jpg"
+            "value": "https://i.ibb.co/kHRrPP3/jessy.jpg"
         },
         "ALIVE_MESSAGE": {
             "description": "Customizable Alive Message!",
             "required": false,
-            "value": "Jessie bot has Alive"
+            "value": "default"
         },
         "AFK_MESSAGE": {
             "description": "Customizable AFK Message! Use => default, to change back.",
