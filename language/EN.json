@@ -457,14 +457,6 @@
             "URL": "Profile URL:",
             "UPDATE": "Last Update:"
         },
-        "lyrics": {
-            "LY_DESC": "Finds the lyrics of the song.",
-            "NEED": "```You Must Write Any Song!```",
-            "SLY": "Lyrics:",
-            "AUT": "Song Owner:",
-            "BUL": "Founded Song:",
-            "ARAT": "Searched Song:"
-        },
         "covid": {
             "COV_DESC": "Shows the Daily and Overall Covid table of more than 07 Countries.",
             "NOT": "```Sorry I Could Not Find A Country Like This..!😣 Please Enter Applicable Country Codes!```\n\n```Country Codes:``` *.covid sl || usa || in || cn || uk || jp || ru*"
