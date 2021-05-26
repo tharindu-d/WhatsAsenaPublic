@@ -8,7 +8,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
 const Language = require('../language');
-const Clang = Language.getString('covid');
+const Clang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 
