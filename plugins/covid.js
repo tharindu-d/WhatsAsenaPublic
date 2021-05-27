@@ -16,7 +16,7 @@ const CRICAS = "Critical Cases"
 const TOTTEST = "Total Test"
 const STAY = "```Stayhome Staysafe...```"
 
-Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc:COV_DESC, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === "") {
         try{
             //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
@@ -36,14 +36,14 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC, do
                 const respod = JSON.parse(ok.body);
                     await message.reply('*🌐 ' + DF +':* ```' + match[2] + '```\n' +
                     '*🔔 ' + TOTCASE +':* ```' + respod.cases + '```\n' + 
-		            '*🏥 ' + DAYCAS +':* ```' + respod.todayCases + '```\n\n' +  
-		            '*⚰️ ' + TOTDETH +':* ```' + respod.deaths + '```\n' +
-		            '*☠️ ' + DAYDETH +':* ```' + respod.todayDeaths + '```\n\n' +
-		            '*💊 ' + TOTRE +':* ```' + respod.recovered + '```\n' +
+		    '*🏥 ' + DAYCAS +':* ```' + respod.todayCases + '```\n\n' +  
+		    '*⚰️ ' + TOTDETH +':* ```' + respod.deaths + '```\n' +
+		    '*☠️ ' + DAYDETH +':* ```' + respod.todayDeaths + '```\n\n' +
+		    '*💊 ' + TOTRE +':* ```' + respod.recovered + '```\n' +
                     '*😷 ' + ACTCAS +':* ```' + respod.active + '```\n' + 
-		            '*🆘 ' + CRICAS +':* ```' + respod.critical + '```\n' +  
-		            '*🧪 ' + TOTTEST +':* ```' + respod.totalTests + '```\n\n' +
-		            '*🏡 ' + STAY +':* ```' + json.main.temp_max + '°```\n');
+		    '*🆘 ' + CRICAS +':* ```' + respod.critical + '```\n' +  
+		    '*🧪 ' + TOTTEST +':* ```' + respod.totalTests + '```\n\n' +
+		    '*🏡 ' + STAY +':* ```');
                 });
 
             } catch (err) {
