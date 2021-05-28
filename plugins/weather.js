@@ -118,7 +118,7 @@ if (Config.WORKTYPE == 'public') {
 	    }
     });
 	
-    Asena.addCommand({pattern: 'movie ?(.*)', desc: Lang.MOVIE_DESC, fromMe: true}, async (message, match) => {
+    Asena.addCommand({pattern: 'movie ?(.*)', desc: Lang.MOVIE_DESC, fromMe: false}, async (message, match) => {
  
 if (message.jid === '905524317852-1612300121@g.us') {
 
