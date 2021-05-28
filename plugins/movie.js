@@ -24,7 +24,7 @@ const TYPE = "Type :"
 const BOX = "BoxOffice :"
 const NOT_FOUNDMO = "```Sorry,I could not your Movie 😖```"
 
-Asena.addCommand({pattern: 'movie ?(.*)', fromMe: true, desc: MOVIE_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'movie ?(.*)', desc: MOVIE_DESC}, async (message, match) => {
  
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_MO);  
         const url = `https://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`;
