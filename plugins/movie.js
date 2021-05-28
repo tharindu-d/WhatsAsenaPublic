@@ -24,9 +24,15 @@ const TYPE = "Type :"
 const BOX = "BoxOffice :"
 const NOT_FOUNDMO = "```Sorry,I could not your Movie 😖```"
 
-Asena.addCommand({pattern: 'movie ?(.*)', desc: MOVIE_DESC,fromMe: true}, async (message, match) => {
+Asena.addCommand({pattern: 'movie ?(.*)', desc: MOVIE_DESC, fromMe: true}, async (message, match) => {
  
-    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_MO);  
+if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
+    
+
+if (match[1] === '') return await message.reply(NEED_MO);  
         const url = `https://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`;
         try {
         const response = await got(url);
@@ -52,4 +58,4 @@ Asena.addCommand({pattern: 'movie ?(.*)', desc: MOVIE_DESC,fromMe: true}, async 
         return await message.client.sendMessage(message.jid, NOT_FOUNDMO, MessageType.text);
     }
     
-});   
+});
