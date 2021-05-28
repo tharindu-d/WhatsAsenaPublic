@@ -16,7 +16,7 @@ const CRICAS = "Critical Cases"
 const TOTTEST = "Total Test"
 const STAY = "```Stayhome Staysafe...```"
 
-Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: COV_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: "covid ?(.*)", desc: COV_DESC,fromMe: true}, (async (message, match) => {
     if (match[2] === '') return await message.reply(NEEDCON); {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries").then(async ok  => {
