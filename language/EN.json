@@ -252,7 +252,10 @@
             "NEED_SONG": "Write a song name. 🧿",
             "NOT_FOUNDS" : "No such songs found! 😢",
             "LYRICS_DESC": "Brings you the song Lyrics. 🎼",
-            "SONGLI": "Lyrics"
+            "SONGLI": "Lyrics",
+            "MOVIE_DESC" = "It Sends Your Enter MOVIE Details",
+            "NEED_MO" = "*Enter Your MOVIE Name..!*",
+            "NOT_FOUNDMO" = "```Sorry,I could not your Movie 😖```"
                     
         },            
         "web": {
