@@ -253,8 +253,10 @@
             "NOT_FOUNDS" : "No such songs found! 😢",
             "LYRICS_DESC": "Brings you the song Lyrics. 🎼",
             "SONGLI": "Lyrics",
-            "COV_DESC": "Shows the Daily and Overall Covid table of more than 07 Countries.",
-            "NOT": "```Sorry I Could Not Find A Country Like This..!😣 Please Enter Applicable Country Codes!```\n\n```Country Codes:``` *.covid sl || usa || in || cn || uk || jp || ru*"
+            "MOVIE_DESC" = "It Sends Your Enter MOVIE Details",
+            "NEED_MO" = "*Enter Your MOVIE Name..!*",
+            "NOT_FOUNDMO" = "```Sorry,I could not your Movie 😖```"
+            
         },            
         "web": {
             "SPEEDTEST_DESC": "Measures Download and Upload speed.",
