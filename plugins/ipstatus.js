@@ -20,6 +20,11 @@ const PROXY = "PROXY :"
 const NOT_FOUNDIP = "```Sorry,I could not your IP 😖```"
 
 Asena.addCommand({pattern: 'ipstatus ?(.*)', desc: IPSTATUS_DESC,fromMe: true}, async (message, match) => {
+	
+    if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
     
     if (match[1] === '') return await message.reply(NEED_IP);
 	const url = `https://api.techniknews.net/ipgeo/${match[1]}`;
