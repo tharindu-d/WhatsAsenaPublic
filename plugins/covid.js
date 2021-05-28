@@ -16,8 +16,14 @@ const CRICAS = "Critical Cases"
 const TOTTEST = "Total Test"
 const STAY = "```Stayhome Staysafe...```"
 
-Asena.addCommand({pattern: "covid ?(.*)", desc: COV_DESC,fromMe: true}, (async (message, match) => {
-    if (match[2] === '') return await message.reply(NEEDCON); {
+Asena.addCommand({pattern: "covid ?(.*)", desc: COV_DESC, fromMe: true}, (async (message, match) => {
+    
+if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
+
+if (match[2] === '') return await message.reply(NEEDCON); {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries").then(async ok  => {
                 const respod = JSON.parse(ok.body);
