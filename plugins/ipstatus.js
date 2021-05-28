@@ -19,10 +19,10 @@ const MOBILE = "MOBILE :"
 const PROXY = "PROXY :"
 const NOT_FOUNDIP = "```Sorry,I could not your IP 😖```"
 
-Asena.addCommand({pattern: 'ipstatus ?(.*)', fromMe: false, desc: IPSTATUS_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'ipstatus ?(.*)', fromMe: true, desc: IPSTATUS_DESC}, async (message, match) => {
     
     if (match[1] === '') return await message.reply(NEED_IP);
-	const url = `https://api.techniknews.net/ipgeo/?q=${match[1]}`;
+	const url = `https://api.techniknews.net/ipgeo/${match[1]}`;
 	try {
 		const response = await got(url);
 		const ipjson = JSON.parse(response.body);
