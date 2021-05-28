@@ -41,10 +41,6 @@ Asena.addCommand({pattern: 'movie ?(.*)', fromMe: true, desc: MOVIE_DESC}, (asyn
         const response = await got(url);
         const mojson = JSON.parse(response.body);
 
-        var image = await axios.get (mojson.Poster, {responseType: 'arraybuffer'})
-       
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png})
-
         if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*🛑' + TITLE +'* ```' + mojson.Title + '```\n' +
         '*📊' + YEAR +'* ```' + mojson.Year + '```\n' +
         '*⚜' + RELE +'* ```' + mojson.Released + '```\n' +
