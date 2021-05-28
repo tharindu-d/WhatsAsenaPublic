@@ -2,10 +2,10 @@ const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 
-const Language = require('../language');
-const MLang = Language.getString('weather');
-
 // List
+const MOVIE_DESC = "It Sends Your Enter MOVIE Details"
+const NEED_MO = "*Enter Your MOVIE Name..!*"
+const NOT_FOUNDMO = "```Sorry,I could not your Movie 😖```"
 const TITLE = "Title :"
 const YEAR = "Year :"
 const RELE = "Released :"
@@ -23,7 +23,7 @@ const ID = "imdbID :"
 const TYPE = "Type :"
 const BOX = "BoxOffice :"
 
-Asena.addCommand({pattern: 'movie ?(.*)', desc: MLang.MOVIE_DESC, fromMe: true}, async (message, match) => {
+Asena.addCommand({pattern: 'movie ?(.*)', desc: MOVIE_DESC, fromMe: true}, async (message, match) => {
  
 if (message.jid === '905524317852-1612300121@g.us') {
 
@@ -31,8 +31,8 @@ if (message.jid === '905524317852-1612300121@g.us') {
             }
     
 
-if (match[1] === '') return await message.reply(MLang.NEED_MO);  
-        const url = `https://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`;
+if (match[1] === '') return await message.reply(NEED_MO);  
+        const url = `https://www.omdbapi.com/?apikey=742b2d09/?t=${match[1]}&plot=full`;
         try {
         const response = await got(url);
         const mojson = JSON.parse(response.body);
@@ -54,7 +54,7 @@ if (match[1] === '') return await message.reply(MLang.NEED_MO);
         '*💢' + BOX +'* ```' + mojson.BoxOffice + '```\n', MessageType.text);
     } 
     catch {
-        return await message.client.sendMessage(message.jid, MLang.NOT_FOUNDMO, MessageType.text);
+        return await message.client.sendMessage(message.jid, NOT_FOUNDMO, MessageType.text);
     }
     
 });   
