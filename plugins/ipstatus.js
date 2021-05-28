@@ -15,40 +15,18 @@ const CITY = "CITY :"
 const ZIP = "ZIP :"
 const CURRENCY = "CURRENCY :"
 const ISP = "ISP :"
-const AS = "ISPALL :"
 const MOBILE = "MOBILE :"
 const PROXY = "PROXY :"
 const NOT_FOUNDIP = "```Sorry,I could not your IP 😖```"
-const IPDO = "☠️ ```Your IP HIDDEN..!```"
 
 Asena.addCommand({pattern: 'ipstatus ?(.*)', fromMe: false, desc: IPSTATUS_DESC}, async (message, match) => {
     
-    if (match[2] === 'xx') {
-        try{
-            const respo = await got("https://api.ipify.org").then(async ok => {
-                const resp = JSON.parse(ok.body);
-                /*await message.reply(`☠️ *Your IP Address:* ${resp}`);*/
-
-            });
-
-        } catch (err) {
-            await message.reply(`Error :\n${err.message}`, MessageType.text)
-        }
-
-    }
-    
-    else if (message.jid === '905524317852-1612300121@g.us') {
-
-        return;
-    }
-    
-    
-    if (match[1] === "${resp}") return await message.reply(NEED_IP);
+    if (match[1] === '') return await message.reply(NEED_IP);
 	const url = `https://api.techniknews.net/ipgeo/?q=${match[1]}`;
 	try {
 		const response = await got(url);
 		const ipjson = JSON.parse(response.body);
-		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*🔴 ' + IP +'* ```' + IPDO + '```\n\n' +
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*🔴 ' + IP +'* ```' + match[1] + '```\n\n' +
 		'*✅' + ST +'* ```' + ipjson.status+ '```\n' +
         '*🌐' + CONTINENT +'* ```' + ipjson.continent+ '```\n' +
         '*🗺' + COUNTRY +'* ```' + ipjson.country+ '```\n' +
@@ -58,7 +36,6 @@ Asena.addCommand({pattern: 'ipstatus ?(.*)', fromMe: false, desc: IPSTATUS_DESC}
         '*🏛' + ZIP +'* ```' + ipjson.zip+ '```\n' +
         '*💸' + CURRENCY +'* ```' + ipjson.currency+ '```\n\n' +
         '*📡' + ISP +'* ```' + ipjson.isp+ '```\n' +
-        '*🧿' + AS +'* ```' + ipjson.as+ '```\n' +
         '*🛡' + PROXY +'* ```' + ipjson.proxy+ '```\n' +
         '*📱' + MOBILE +'* ```' + ipjson.mobile+ '```\n', MessageType.text);
 	} 
