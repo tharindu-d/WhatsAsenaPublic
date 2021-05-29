@@ -73,7 +73,34 @@ if (match[1] === '') return await message.reply(Lang.NEED_MO);
         return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMO, MessageType.text);
     }
     
-});   
+});
+	Asena.addCommand({pattern: "covid ?(.*)", desc: Lang.COV_DESC, fromMe: true}, (async (message, match) => {
+    
+if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
+
+if (match[1] === '') return await message.reply(Lang.NEEDCON);
+	    const url = 'https://coronavirus-19-api.herokuapp.com/countries'
+            try{
+                const response = await got(url);
+                const respod = JSON.parse(response.body);
+                if (response.statusCode === 200) return await message.client.sendMessage(message.jid,'*🌐 ' + Lang.DF +':* ```' + match[1] + '```\n\n' +
+                    '*🔔 ' + Lang.TOTCASE +':* ```' + respod.cases + '```\n' + 
+		    '*🏥 ' + Lang.DAYCAS +':* ```' + respod.todayCases + '```\n' +  
+		    '*⚰️ ' + Lang.TOTDETH +':* ```' + respod.deaths + '```\n' +
+		    '*☠️ ' + Lang.DAYDETH +':* ```' + respod.todayDeaths + '```\n\n' +
+		    '*💊 ' + Lang.TOTRE +':* ```' + respod.recovered + '```\n' +
+                    '*😷 ' + Lang.ACTCAS +':* ```' + respod.active + '```\n' + 
+		    '*🆘 ' + Lang.CRICAS +':* ```' + respod.critical + '```\n' +  
+		    '*🧪 ' + Lang.TOTTEST +':* ```' + respod.totalTests + '```\n\n' +
+		    '*🏡 ' + Lang.STAY +':* ```\n', MessageType.text);
+                }
+		catch {
+                return await message.client.sendMessage(message.jid, Lang.NOT, MessageType.text);
+            }     
+));
 }
 if (Config.WORKTYPE == 'public') {
 
@@ -132,5 +159,33 @@ if (match[1] === '') return await message.reply(Lang.NEED_MO);
     catch {
         return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMO, MessageType.text);
     }    
-});   
+});
+
+Asena.addCommand({pattern: "covid ?(.*)", desc: Lang.COV_DESC, fromMe: false}, (async (message, match) => {
+    
+if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
+
+if (match[1] === '') return await message.reply(Lang.NEEDCON);
+	    const url = 'https://coronavirus-19-api.herokuapp.com/countries'
+            try{
+                const response = await got(url);
+                const respod = JSON.parse(response.body);
+                if (response.statusCode === 200) return await message.client.sendMessage(message.jid,'*🌐 ' + Lang.DF +':* ```' + match[1] + '```\n\n' +
+                    '*🔔 ' + Lang.TOTCASE +':* ```' + respod.cases + '```\n' + 
+		    '*🏥 ' + Lang.DAYCAS +':* ```' + respod.todayCases + '```\n' +  
+		    '*⚰️ ' + Lang.TOTDETH +':* ```' + respod.deaths + '```\n' +
+		    '*☠️ ' + Lang.DAYDETH +':* ```' + respod.todayDeaths + '```\n\n' +
+		    '*💊 ' + Lang.TOTRE +':* ```' + respod.recovered + '```\n' +
+                    '*😷 ' + Lang.ACTCAS +':* ```' + respod.active + '```\n' + 
+		    '*🆘 ' + Lang.CRICAS +':* ```' + respod.critical + '```\n' +  
+		    '*🧪 ' + Lang.TOTTEST +':* ```' + respod.totalTests + '```\n\n' +
+		    '*🏡 ' + Lang.STAY +':* ```\n', MessageType.text);
+                }
+		catch {
+                return await message.client.sendMessage(message.jid, Lang.NOT, MessageType.text);
+            }     
+));
 }
