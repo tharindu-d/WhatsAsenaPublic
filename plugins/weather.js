@@ -74,7 +74,7 @@ if (match[1] === '') return await message.reply(Lang.NEED_MO);
     }
     
 });
-	Asena.addCommand({pattern: "covid ?(.*)", desc: Lang.COV_DESC, fromMe: true}, (async (message, match) => {
+	Asena.addCommand({pattern: "covid ?(.*)", desc: Lang.COV_DESC, fromMe: true}, async (message, match) => {
     
 if (message.jid === '905524317852-1612300121@g.us') {
 
@@ -161,7 +161,7 @@ if (match[1] === '') return await message.reply(Lang.NEED_MO);
     }    
 });
 
-Asena.addCommand({pattern: "covid ?(.*)", desc: Lang.COV_DESC, fromMe: false}, (async (message, match) => {
+Asena.addCommand({pattern: "covid ?(.*)", desc: Lang.COV_DESC, fromMe: false}, async (message, match) => {
     
 if (message.jid === '905524317852-1612300121@g.us') {
 
