@@ -82,7 +82,7 @@ if (message.jid === '905524317852-1612300121@g.us') {
             }
 
 if (match[1] === '') return await message.reply(Lang.NEEDCON);
-	    const url = 'https://coronavirus-19-api.herokuapp.com/countries'
+	    const url = `https://coronavirus-19-api.herokuapp.com/countries`;
             try{
                 const response = await got(url);
                 const respod = JSON.parse(response.body);
@@ -169,7 +169,7 @@ if (message.jid === '905524317852-1612300121@g.us') {
             }
 
 if (match[1] === '') return await message.reply(Lang.NEEDCON);
-	    const url = 'https://coronavirus-19-api.herokuapp.com/countries'
+	    const url = `https://coronavirus-19-api.herokuapp.com/countries`;
             try{
                 const response = await got(url);
                 const respod = JSON.parse(response.body);
