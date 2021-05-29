@@ -271,8 +271,20 @@
             "VOTE": "imdbVotes :",
             "ID": "imdbID :",
             "TYPE": "Type :",
-            "BOX": "BoxOffice :"
-                    
+            "BOX": "BoxOffice :",
+            "COV_DESC": "Shows the Daily and Overall Covid table of Countries.",
+            "NOT": "```Sorry I Could Not Find A Country Like This..!😣```",
+            "NEEDCON": "ENTER YOUR COUNRTY.!",
+            "DF": "Datas for ",
+            "TOTCASE": "Total Cases",
+            "DAYCAS": "Daily Cases",
+            "TOTDETH": "Total Deaths",
+            "DAYDETH": "Daily Deaths",
+            "TOTRE": "Total Recovered",
+            "ACTCAS": "Active Cases",
+            "CRICAS": "Critical Cases",
+            "TOTTEST": "Total Test",
+            "STAY" = "```Stayhome Staysafe...```"                   
         },            
         "web": {
             "SPEEDTEST_DESC": "Measures Download and Upload speed.",
