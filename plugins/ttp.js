@@ -76,8 +76,10 @@ else if (Config.WORKTYPE == 'public') {
 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+        
+        var uri = encodeURI(match[1])
 
-        var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=${match[1]}', { responseType: 'arraybuffer' })
+        var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text='+ uri, { responseType: 'arraybuffer' })
         
         await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
 
