@@ -8,8 +8,8 @@ const IG_DESC = "Downloads Image/Video From Instagram"
 const NEED_WORD = "Must Enter a link"
 const FBDESC = "Downloads Video From FaceBook"
 const LOADING = "Downloading the Video..."
-const NOT_FOUNDFB = "Video Not Found"
-const CAPTION = "Caption"
+const NOT_FOUNDFB = "Video Not Found..😣"
+const CAPTION = "⬇"
 
 Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (message, match) => {
 
@@ -52,23 +52,23 @@ Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (me
 
 Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (message, match) => {
 
-    const userName = match[1]
+     const userName = match[1]
 
     if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
 
     await message.sendMessage(infoMessage(LOADING))
 
     await axios
-      .get(`https://videfikri.com/api/fbdl/?urlfb=${userName}`)
+      .get(`https://api.xteam.xyz/dl/fb?url=${userName}/&APIKEY=e54e1ba7d7df547a`)
       .then(async (response) => {
         const {
-          url,
-          judul,
+          contentUrl,
+          description,
         } = response.data.result
 
-        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(contentUrl, {responseType: 'arraybuffer'})
 
-        const msg = `*${CAPTION}*: ${judul}`
+        const msg = `*${CAPTION}*: ${description}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: "★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥"
