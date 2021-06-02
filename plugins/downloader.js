@@ -4,11 +4,11 @@ const got = require('got');
 const fs = require('fs');
 const axios = require('axios');
 const { errorMessage, infoMessage } = require('../helpers');
-const IG_DESC = "Downloads Image/Video From Instagram"
-const NEED_WORD = "Must Enter a link"
-const FBDESC = "Downloads Video From FaceBook"
-const LOADING = "Downloading the Video..."
-const NOT_FOUNDFB = "Video Not Found..😣"
+const IG_DESC = "```Downloads Image/Video From Instagram..```"
+const NEED_WORD = "```Must Enter a link```"
+const FBDESC = "```Downloads Video From FaceBook```"
+const LOADING = "```Downloading the Video...```"
+const NOT_FOUNDFB = "```Video Not Found..```😣"
 const CAPTION = "⬇"
 
 Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (message, match) => {
@@ -17,7 +17,7 @@ Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (me
 
     if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
 
-    await message.sendMessage(infoMessage("Downloading the Post..."))
+    await message.sendMessage("```Downloading the Post...```")
 
     await axios
       .get(`https://api-anoncybfakeplayer.herokuapp.com/igdown?url=${userName}`)
@@ -56,7 +56,7 @@ Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (me
 
     if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
 
-    await message.sendMessage(infoMessage(LOADING))
+    await message.sendMessage(LOADING)
 
     await axios
       .get(`https://api.xteam.xyz/dl/fb?url=${userName}/&APIKEY=e54e1ba7d7df547a`)
