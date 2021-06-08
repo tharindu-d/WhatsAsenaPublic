@@ -609,17 +609,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
     
     }));
-    
-    Asena.addCommand({pattern: 'eimg ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
-
-      if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
-  
-      var webimage = await axios.get(`https://api.zeks.xyz/api/emoji-image?apikey=odsMYXx67ZhT38w5hp5mgRKO8En&emoji=${match[1]}`, { responseType: 'arraybuffer' })
-  
-      await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
-  
-    }));
-
+ 
      Asena.addCommand({pattern: 'robo ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
