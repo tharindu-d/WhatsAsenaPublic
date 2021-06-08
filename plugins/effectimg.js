@@ -426,11 +426,11 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'aveng ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/photooxy/harrypotter?text=${match[1]}&APIKEY=e54e1ba7d7df547a`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.zeks.xyz/api/logoaveng?apikey=odsMYXx67ZhT38w5hp5mgRKO8En&text1=Jessie&text2=${match[1]}`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
 
@@ -507,14 +507,7 @@ else if (Config.WORKTYPE == 'public') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
-  var topText, bottomText;
-    if (match[1].includes('/')) {
-        var split = match[1].split('/');
-        bottomText = split[1];
-        topText = split[0];
-}
-
-    var webimage = await axios.get(`https://api.zeks.xyz/api/phlogo?apikey=odsMYXx67ZhT38w5hp5mgRKO8En&text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.zeks.xyz/api/phlogo?apikey=odsMYXx67ZhT38w5hp5mgRKO8En&text1=Jessie-X&text2=${match[1]}`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
 
@@ -599,4 +592,41 @@ else if (Config.WORKTYPE == 'public') {
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
 
     }));
+    
+    Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+      
+      var topText, bottomText;
+        if (match[1].includes('/')) {
+            var split = match[1].split('/');
+            bottomText = split[1];
+            topText = split[0];
+    }
+    
+        var webimage = await axios.get(`https://api.zeks.xyz/api/marvellogo?apikey=odsMYXx67ZhT38w5hp5mgRKO8En&text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
+    
+        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
+    
+    }));
+    
+    Asena.addCommand({pattern: 'eimg ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+      if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+  
+      var webimage = await axios.get(`https://api.zeks.xyz/api/emoji-image?apikey=odsMYXx67ZhT38w5hp5mgRKO8En&emoji=${match[1]}`, { responseType: 'arraybuffer' })
+  
+      await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
+  
+    }));
+
+     Asena.addCommand({pattern: 'robo ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+    
+        var webimage = await axios.get(`https://robohash.org/${match[1]}`, { responseType: 'arraybuffer' })
+    
+        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 𝙹𝚎𝚜𝚜𝚒𝚎 💝🔥'})
+    
+     }));
 }
