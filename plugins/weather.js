@@ -182,7 +182,7 @@ if (match[1] === '') return await message.reply(Lang.NEEDCON);
                     '*😷' + Lang.ACTCAS +':* ```' + respod.active + '```\n' + 
 		    '*🆘' + Lang.CRICAS +':* ```' + respod.critical + '```\n' +  
 		    '*🧪' + Lang.TOTTEST +':* ```' + respod.totalTests + '```\n\n' +
-		    '*🏡' + Lang.STAY +'* \n', MessageType.text);
+		    '🏡' + Lang.STAY +' \n', MessageType.text);
                 }
 		catch {
                 return await message.client.sendMessage(message.jid, Lang.NOT, MessageType.text);
