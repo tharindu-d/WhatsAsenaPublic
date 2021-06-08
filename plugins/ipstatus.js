@@ -19,7 +19,7 @@ const MOBILE = "MOBILE :"
 const PROXY = "PROXY :"
 const NOT_FOUNDIP = "```Sorry,I could not your IP 😖```"
 
-Asena.addCommand({pattern: 'ipstatus ?(.*)', desc: IPSTATUS_DESC,fromMe: true}, async (message, match) => {
+Asena.addCommand({pattern: 'ipstatus ?(.*)', desc: IPSTATUS_DESC,fromMe: false}, async (message, match) => {
 	
     if (message.jid === '905524317852-1612300121@g.us') {
 
