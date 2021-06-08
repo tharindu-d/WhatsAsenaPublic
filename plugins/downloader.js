@@ -15,7 +15,7 @@ Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (me
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
+    if (!userName) return await message.sendMessage(NEED_WORD)
 
     await message.sendMessage("```Downloading the Post...```")
 
@@ -42,7 +42,7 @@ Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (me
         
       })
       .catch(
-        async (err) => await message.sendMessage(errorMessage("Invaild Link, Please Enter a Vaild Instagram Link..!")),
+        async (err) => await message.sendMessage("Invaild Link, Please Enter a Vaild Instagram Link..!"),
       )
   },
 )
@@ -54,7 +54,7 @@ Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (me
 
      const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
+    if (!userName) return await message.sendMessage(NEED_WORD)
 
     await message.sendMessage(LOADING)
 
@@ -75,7 +75,7 @@ Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (me
         })
       })
       .catch(
-        async (err) => await message.sendMessage(errorMessage(NOT_FOUNDFB )),
+        async (err) => await message.sendMessage(NOT_FOUNDFB),
       )
   },
 )
