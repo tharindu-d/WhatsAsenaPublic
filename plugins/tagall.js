@@ -62,16 +62,3 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC 
         await message.client.sendMessage(message.jid,tx, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }
 }));
-var stag_dsc = ''
-if (Config.LANG == 'EN') stag_dsc = 'Sends the replied message to all members in the group.'
-
-
-Asena.addCommand({pattern: 'stam$', fromMe: true, desc: stag_dsc }, (async (message, match) => {
-    if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.ADMİN, MessageType.text)
-    grup = await message.client.groupMetadata(message.jid);
-    var jids = [];
-    mesaj = '';
-    grup['participants'].map(async (uye) => {
-        await message.client.sendMessage(uye.jid, message.reply_message.text, MessageType.text)
-    })
-}));
