@@ -386,11 +386,6 @@ else if (config.WORKTYPE == 'public') {
 
    Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
-
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
         arama = arama.all;
@@ -425,27 +420,28 @@ else if (config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
 
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
-
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
+        var VID = '';
         try {
-            var arama = await yts({videoId: ytdl.getURLVideoID(match[1])});
+            if (match[1].includes('watch')) {
+                var tsts = match[1].replace('watch?v=', '')
+                var alal = tsts.split('/')[3]
+                VID = alal
+            } else {     
+                VID = match[1].split('/')[3]
+            }
         } catch {
             return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
         }
-
         var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
 
-        var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
+        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
+        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
         });
     }));
 
